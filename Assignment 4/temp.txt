@@ -1,0 +1,46 @@
+/*
+**  a4.cpp
+**  Assignment 4, CMPT-225
+**
+**  Reads a sequence of integers (in the range of int's) from standard in;
+**  It is interpreted as two lists, separated by a single 0
+**/
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main() {
+
+	int x;
+	bool List2 = false;
+	cout << "list 1:" << endl;
+	list<int> list1;
+	list<int> list2;
+	cin >> x;
+	while (!cin.eof()) {
+		if (x == 0) {
+			List2 = true;
+			cout << "\nlist 2:\n";
+		}
+		else {
+			cout << x << " ";
+		}
+		cin >> x;
+		if (List2 == true)
+		{
+			list2.push_front(x);
+		}
+		else
+		{
+			list1.pop_front(x);
+		}
+	}
+	list1.sort();
+	list2.sort();
+	for (int i = 0; i < list1.size(); i++)
+	{
+		cout << list1.pop_front << " ";
+	}
+	cout << endl
+
+}

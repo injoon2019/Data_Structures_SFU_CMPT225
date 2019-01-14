@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	double number;
+	cin>>number;
+
+
+	//Check whether integer or not
+	if (number != (int)number)
+		cout<<"Nonint";
+
+	else if ((int)number%2==0)
+		cout<<"Even";
+	else if ((int)number%2 != 0)
+		cout<<"Odd";
+	return 0;
+}
